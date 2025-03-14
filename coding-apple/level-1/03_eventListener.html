@@ -1,0 +1,42 @@
+<!--
+    classNameSelector
+    - getElementByClassName() 
+        - class로 찾기 가능
+        - 동일한 class명이 존재할 수 있기 때문에 항상 인덱싱 []을 해줘야 함!
+        
+    이벤트 리스너
+     - onclick 없이 JS 코드만으로 이전의 기능 구현 가능(HTML이 깔끔해짐)
+     
+     **콜백함수: 파라미터 자리에 들어가는 함수, 코드를 순차적으로 실행할 때 사용
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener</title>
+    <link rel="stylesheet" href="03_eventListener.css">
+</head>
+<body>
+    <div class="alert-box" id="alert">
+        <p class="title-msg" id="alert-msg">알림창임</p>
+        <button id="close" onclick="closeAlert('none');">닫기</button>
+    </div>
+    <button onclick="changeMsg('아이디 입력하세요');">버튼 1</button>
+    <button onclick="changeMsg('비번 입력하세요');">버튼 2</button>
+    
+    <script>
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementsByClassName('alert-box')[0].style.display = 'none';
+        })
+        
+        function changeMsg(msg) {
+            //document.getElementById('alert-msg').innerHTML = msg;
+            document.getElementsByClassName('title-msg')[0].innerHTML = msg;
+            document.getElementById('alert').style.display = 'block';
+        }
+        
+
+    </script>
+</body>
+</html>

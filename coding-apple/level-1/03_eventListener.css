@@ -1,0 +1,12 @@
+.alert-box {
+    display: flex;
+    align-items: center;
+    background-color: #dbe6fd;
+    color: #3b5998;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    
+    display: none;
+}

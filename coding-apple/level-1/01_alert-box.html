@@ -1,0 +1,42 @@
+<!--
+    UI 만드는 법
+    
+    1. 보여줄 정적 UI를 HTML과 CSS로 만들고, 평소엔 숨긴다
+    2. 버튼 누르기 등 동작 시 UI를 보여달라고 JS 코드 짠다
+    
+    
+    ---
+    - js 코드는 조작할 html 코드 밑에 작성
+    - f12 console 탭에서 디버깅
+    
+    
+    ---
+    1. 셀렉터
+        getElementById()
+    
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>alert-box</title>
+    <link rel="stylesheet" href="01_alert-box.css">
+</head>
+<body>
+    <div class="alert-box" id="alert"><strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button class="close-button" onclick="closeAlert('none');">✖</button>
+    </div>
+    
+    <button onclick="openAlert('block');">띄우기</button>
+    
+    <script>
+        function openAlert(cmd){
+            document.getElementById('alert').style.display = cmd;
+        }
+        
+        function closeAlert(cmd){
+            document.getElementById('alert').style.display = cmd;
+        }
+    </script>
+</body>
+</html>

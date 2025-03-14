@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz</title>
+</head>
+<body>
+    <p>태조 이성계가 태어난 년도는?</p>
+    <input type="text" id="answer">
+    <button type="submit" id="send-answer">제출</button>
+
+    <script>
+        let cnt = 0;
+        // jQuery에선 val()인데, JS에선 value
+        // 폼에서만 submit 이벤트 발생함(여기서는 그냥 버튼임)
+        document.querySelector('#send-answer').addEventListener('click', function(){
+            cnt++;
+            if (document.getElementsByTagName('input')[0].value == "1335"){
+                alert('성공');
+            } else if (cnt >= 3){
+                alert('멍청아');
+            }
+        })
+    </script>
+</body>
+</html>

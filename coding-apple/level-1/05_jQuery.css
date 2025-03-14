@@ -1,0 +1,11 @@
+
+.list-group {
+    text-align: left;
+    
+    display: none;
+    
+}
+
+.show {
+    display: block;
+}

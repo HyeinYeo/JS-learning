@@ -1,0 +1,44 @@
+<!--
+    1. function과 파라미터 활용
+    
+    2. classNameSelector
+    - getElementByClassName() 
+        - class로 찾기 가능
+        - 동일한 class명이 존재할 수 있기 때문에 항상 인덱싱 []을 해줘야 함!
+    
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function</title>
+    <link rel="stylesheet" href="02_function.css">
+</head>
+<body>
+    
+   <!-- function 
+        버튼 1 누르면 alert 박스에 아이디 입력하세요
+        버튼 2 누르면 alert 박스에 비번 입력하세요
+    -->
+    
+    <div class="alert-box" id="alert">
+        <p class="title-msg" id="alert-msg">알림창임</p>
+        <button class="close-button" onclick="closeAlert('none');">닫기</button>
+    </div>
+    <button onclick="changeMsg('아이디 입력하세요');">버튼 1</button>
+    <button onclick="changeMsg('비번 입력하세요');">버튼 2</button>
+    
+    <script>
+        function closeAlert(cmd){
+            document.getElementById('alert').style.display = cmd;
+        }
+        function changeMsg(msg) {
+            //document.getElementById('alert-msg').innerHTML = msg;
+            document.getElementsByClassName('title-msg')[0].innerHTML = msg;
+            document.getElementById('alert').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
