@@ -1,0 +1,80 @@
+:root{
+    scroll-behavior: auto; /* 부트스트랩에 적용된 스크롤 매끄럽게 하는 기능 끄기 */
+}
+
+.list-group {    
+    display: none;
+}
+
+.show {
+    display: block;
+}
+.main-bg {
+    background-color: lightgrey;
+    padding: 100px 20px;
+}
+
+.black-bg {
+  width : 100%;
+  height : 100%;
+  position : fixed;
+  background : rgba(0,0,0,0.5);
+  z-index : 5;
+  padding: 30px;
+    
+    
+    /* 시작스타일 */
+    visibility: hidden; /* display: none; */
+    opacity: 0;
+    
+    /* 트랜지션 추가 */
+    transition: all 0.5s;
+}
+.white-bg {
+  background: white;
+  border-radius: 5px;
+  padding: 30px;
+} 
+
+.show-modal {
+    display: block;
+    
+    /*최종스타일*/
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.slide-container {
+    width: 300vw;
+    
+    /* 최종화면 */
+    /* margin-left: -100vw;*/
+    /* transform: translateX(-100vw); /*성능상의 이점이 좀 더 있음, 부드러움*/
+    transition: all 1s;
+    
+}
+
+.slide-box {
+    width: 100vw;
+    float: left;
+}
+.slide-box img{
+    width: 100%;
+}
+
+.navbar {
+    position: fixed; /* 상단 고정 */
+    width: 100%;
+    z-index: 5;
+}
+
+.navbar-brand {
+    /* 애니메이션 시작 전 스타일*/
+    font-size: 25px;
+    
+    /* 트랜지션 */
+    transition: all 1s;
+    transition-timing-function: ease;
+    
+}
